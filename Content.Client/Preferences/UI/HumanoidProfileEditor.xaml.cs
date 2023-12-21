@@ -82,6 +82,7 @@ namespace Content.Client.Preferences.UI
         private BoxContainer _traitsList => CTraitsList;
         private readonly List<JobPrioritySelector> _jobPriorities;
         private OptionButton _preferenceUnavailableButton => CPreferenceUnavailableButton;
+        private CheckBox _jobPrefixCheckBox => CJobPrefixEnabledCheckBox;
         private readonly Dictionary<string, BoxContainer> _jobCategories;
         // Mildly hacky, as I don't trust prototype order to stay consistent and don't want the UI to break should a new one get added mid-edit. --moony
         private readonly List<SpeciesPrototype> _speciesList;
@@ -374,6 +375,11 @@ namespace Content.Client.Preferences.UI
 
                 Profile = Profile?.WithPreferenceUnavailable((PreferenceUnavailableMode) args.Id);
                 IsDirty = true;
+            };
+
+            _jobPrefixCheckBox.OnToggled += args =>
+            {
+                Profile =
             };
 
             _jobPriorities = new List<JobPrioritySelector>();

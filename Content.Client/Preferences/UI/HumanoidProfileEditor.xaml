@@ -119,6 +119,7 @@
                 <BoxContainer Orientation="Vertical">
                     <!-- Jobs -->
                     <OptionButton Name="CPreferenceUnavailableButton" />
+                    <CheckBox Name="CJobPrefixPreferenceCheckBox" Margin="10 4" Text="{Loc 'humanoid-profile-editor-job-prefix-checkbox'}" />
                     <ScrollContainer VerticalExpand="True">
                         <BoxContainer Name="CJobList" Orientation="Vertical" />
                     </ScrollContainer>
